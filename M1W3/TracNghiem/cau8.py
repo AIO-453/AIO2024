@@ -82,12 +82,13 @@ if __name__ == '__main__':
     teacher2 = Teacher(name=" teacherB ", yob=1995, subject=" History ")
     doctor1 = Doctor(name=" doctorA ", yob=1945,
                      specialist=" Endocrinologists ")
-    assert Ward . count_doctor() == 1
+    ward1 = Ward(name="Ward1")
+    ward1 . add_person(doctor1)
+    assert ward1.count_doctor() == 1
+
     doctor2 = Doctor(name=" doctorB ", yob=1975, specialist=" Cardiologists ")
-    ward1 = Ward(name=" Ward1 ")
     ward1 . add_person(student1)
     ward1 . add_person(teacher1)
     ward1 . add_person(teacher2)
-    ward1 . add_person(doctor1)
     ward1 . add_person(doctor2)
     ward1 . count_doctor()
