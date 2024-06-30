@@ -4,6 +4,8 @@ on:
     branches:
       - main
       - branch-*    # The other branches to be analyzed
+      - feature
+      - develop
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
